@@ -8,11 +8,11 @@
   "variable": [
     {
       "key": "baseUrl",
-      "value": "http://localhost:9090"
+      "value": "https://appa-mock-api.onrender.com"
     },
     {
       "key": "userId",
-      "value": "U100"
+      "value": "U101"
     }
   ],
   "item": [
@@ -43,7 +43,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"userName\": \"Nguyen Van A\",\n  \"email\": \"a@example.com\",\n  \"department\": \"IT\",\n  \"role\": \"USER\",\n  \"accessRights\": [\"HR:Read\", \"Finance:Write\"],\n  \"active\": true\n}"
+              "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"userName\": \"Tran Minh Khoa\",\n  \"email\": \"khoa.tran@example.com\",\n  \"department\": \"Finance\",\n  \"role\": \"USER\",\n  \"accessRights\": [\"Finance:Read\", \"Finance:Write\"],\n  \"active\": true\n}"
             },
             "url": {
               "raw": "{{baseUrl}}/api/users",

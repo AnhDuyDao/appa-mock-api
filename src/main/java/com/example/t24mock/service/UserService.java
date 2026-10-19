@@ -16,6 +16,19 @@ public class UserService {
 
   private final Map<String, UserResponse> userStore = new ConcurrentHashMap<>();
 
+  public UserService() {
+    UserResponse defaultUser = new UserResponse(
+        "U100",
+        "Nguyen Van A",
+        "a@example.com",
+        "IT",
+        "USER",
+        List.of("HR:Read", "Finance:Write"));
+
+    defaultUser.setActive(true);
+    userStore.put(defaultUser.getUserId(), defaultUser);
+  }
+
   public UserResponse createUser(UserRequest request) {
     if (userStore.containsKey(request.getUserId())) {
       throw new IllegalArgumentException("User already exists");
